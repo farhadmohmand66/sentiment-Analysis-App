@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Sentiment Analysis Application </title>
+    <link rel = "stylesheet" href = "{% static 'css/all.css' %}">
+    <link rel = "stylesheet" href = "{% static 'css/bootstrap.css' %}">
+    {% block corecss %}
+    <link rel = "stylesheet" href = "{% static 'css/coreCss.css' %}">
+
+    {% endblock corecss %}
+</head>
+<body style="background-color: #eee8e8;">
+    <br>
+    <h3 style="text-align:center;">Pashto Text Sentiment Analysis  Application</h3>
+    <p style="text-align:center;">Model is trained on Pushto text of Politics, Sports, and Dramas</p>
+    <form style="text-align:center;" action="" method="POST">
+        {% csrf_token %}
+       <p style="text-align:center; color: blueviolet; font-size:20px">Opinion :</p> 
+        <input   type="text" name="opinion" placeholder="Paste your opinion here" style=" border-radius: 20px; height:80px;width: 400px; text-align: center; font-size: 19px;" required>
+        <br/> 
+        <br/> 
+        <input type="submit" style=" border-radius: 20px; height:50px;width: 400px; background-color: aquamarine; "  value="Predict">
+    </form>
+    <br/>
+    {% if result %}
+    <h3 style="text-align:center; color: blue; font-size: 22px;" >Result: Your opinion is {{result}}</h3>
+{% endif %}
+</body>
+</html>
