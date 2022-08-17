@@ -4,10 +4,10 @@ import numpy as np
 from joblib import load
 model = load('./savedModels/nbModelPred.joblib')
 vect = load('./savedModels/vect.joblib')
-from nltk.corpus import stopwords # to remove the stopwrods
-from nltk.stem.porter import PorterStemmer # steam to root word every
+# from nltk.corpus import stopwords # to remove the stopwrods
+# from nltk.stem.porter import PorterStemmer # steam to root word every
 import re
-steamer = PorterStemmer()
+# steamer = PorterStemmer()
 
 def predictor(request):
     if request.method == 'POST':
@@ -15,11 +15,10 @@ def predictor(request):
         opinion = re.sub('[^a-zA-Z]', ' ', opinion)
         opinion = opinion.lower()
         opinion = opinion.split()
-        print(type(opinion), opinion, ":this is 2")
-        steamer = PorterStemmer()
-        stopwordAll = stopwords.words('english')
-        stopwordAll.remove('not')
-        opinion = [steamer.stem(word) for word in opinion if not word in set(stopwordAll)]
+#         steamer = PorterStemmer()
+#         stopwordAll = stopwords.words('english')
+#         stopwordAll.remove('not')
+#         opinion = [steamer.stem(word) for word in opinion if not word in set(stopwordAll)]
         opinion = ' '.join(opinion)
         corpusNew = [opinion]
         y_pred = model.predict(vect.transform(corpusNew))
