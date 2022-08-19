@@ -2,7 +2,7 @@
 # Sentiment Analysis of Pashto Text using Machine Learning Techniques
 
 Sentiment analysis has vast applications such as for political results predictions, decision-making related to different services and products, and recommendations of various items. People express their opinions on social media in the English language as well as their native languages. This project aims to carry out sentiment analysis on one of the native languages called "Pashto". Pashto language is the national language of Afghanistan, and it is spoken in many regions of Pakistan. We used online social networks generated corpus and annotated it into positive and negative by two different native and well-aware Pashto speakers. We performed binary classification using Supervised Learning algorithms including Support Vector Machine, Naive Bayes, decision Tree, Random Forest , and AdaBoost. The results are evaluated using the standard performance evaluation measures including Accuracy, F-measure, Precision, and Recall. The results show that the Naive Bayes achieved better accuracy than other ML algorithms.
-Web app developed in Django deployed on Heroku server
+Web app developed in Django deployed on Heroku server.
 
 
 ## About Corpos
