@@ -11,7 +11,5 @@ https://www.kaggle.com/datasets/farhadkhan66/pashto-translated-corpus
 
 Deploy this project on Heroku server
 
-```bash
-  https://sentimentanalysispashto.herokuapp.com/
-```
+https://sentimentanalysispashto.herokuapp.com
 
